@@ -1,0 +1,16 @@
+<phpunit
+        bootstrap="./tests/bootstrap.php.dist"
+        colors="true"
+        beStrictAboutOutputDuringTests="true"
+        beStrictAboutChangesToGlobalState="true"
+        backupGlobals="true"
+        backupStaticAttributes="true"
+        processIsolation="true"
+        stopOnError="true"
+        stopOnFailure="true">
+    <testsuites>
+        <testsuite>
+            <directory suffix="Test.php">./tests/src/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

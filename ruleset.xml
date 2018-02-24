@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress PSR and PHPCompatibility">
+    <description>Best practices beyond core WordPress Coding Standards and PSR</description>
+
+    <!--
+    PHP 7.0 and higher.
+    -->
+    <config name="testVersion" value="7.0-"/>
+
+    <!--
+    PSR 2 Code style.
+    See http://www.php-fig.org/psr/psr-2/
+    -->
+    <rule ref="PSR2"/>
+
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="Generic.PHP.ForbiddenFunctions"/>
+    <rule ref="Generic.Functions.CallTimePassByReference"/>
+    <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+    <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall"/>
+    <rule ref="Generic.CodeAnalysis.JumbledIncrementer"/>
+    <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
+    <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
+    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
+    <rule ref="Generic.Classes.DuplicateClassName"/>
+    <rule ref="Generic.Strings.UnnecessaryStringConcat"/>
+    <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+
+    <rule ref="WordPress.PHP.DiscouragedFunctions"/>
+    <rule ref="WordPress.PHP.POSIXFunctions"/>
+    <rule ref="WordPress.PHP.StrictComparisons"/>
+
+    <!--
+    http://make.wordpress.org/core/handbook/coding-standards/php/#remove-trailing-spaces
+    -->
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/>
+
+    <rule ref="WordPress.PHP.DontExtract"/>
+    <rule ref="WordPress.NamingConventions.ValidHookName"/>
+    <rule ref="WordPress.Security.EscapeOutput"/>
+    <rule ref="WordPress.Security.NonceVerification"/>
+    <rule ref="WordPress.DB.PreparedSQL"/>
+    <rule ref="WordPress.WP.GlobalVariablesOverride"/>
+    <rule ref="WordPress.WP.EnqueuedResources"/>
+    <rule ref="WordPress.WP.I18n"/>
+    <rule ref="WordPress.PHP.StrictInArray"/>
+
+    <rule ref="Squiz.Commenting.BlockComment"/>
+    <rule ref="Squiz.Commenting.DocCommentAlignment"/>
+    <rule ref="Squiz.Commenting.EmptyCatchComment"/>
+    <rule ref="Squiz.Commenting.InlineComment"/>
+    <rule ref="Squiz.Commenting.LongConditionClosingComment"/>
+    <rule ref="Squiz.Commenting.PostStatementComment"/>
+
+    <!--
+    Neutron standard are quality tools for PHP7 development from Automattic.
+    See https://github.com/Automattic/phpcs-neutron-standard
+    -->
+    <rule ref="NeutronStandard">
+        <exclude name="NeutronStandard.Functions.LongFunction"/>
+        <exclude name="NeutronStandard.Functions.VariableFunctions"/>
+    </rule>
+
+    <!--
+    Variable Analysis
+    -->
+    <rule ref="VariableAnalysis"/>
+
+    <!--
+    Object Calisthenics
+    -->
+    <rule ref="ObjectCalisthenics.Metrics.MaxNestingLevel">
+        <properties>
+            <property name="maxNestingLevel" value="2"/>
+        </properties>
+    </rule>
+    <rule ref="ObjectCalisthenics.ControlStructures.NoElse"/>
+    <!--<rule ref="ObjectCalisthenics.NamingConventions.ElementNameMinimalLength"/>-->
+    <!--<rule ref="ObjectCalisthenics.Classes.ForbiddenPublicProperty"/>-->
+    <rule ref="ObjectCalisthenics.NamingConventions.NoSetter"/>
+    <rule ref="ObjectCalisthenics.Metrics.PropertyPerClassLimit">
+        <properties>
+            <property name="maxCount" value="5"/>
+        </properties>
+    </rule>
+
+    <!--
+    Run against the PHPCompatibility ruleset
+    -->
+    <rule ref="PHPCompatibility"/>
+</ruleset>

@@ -1,0 +1,3 @@
+<?php
+// Require Composer Auto-loader.
+require_once dirname(__DIR__) . '/vendor/autoload.php';
