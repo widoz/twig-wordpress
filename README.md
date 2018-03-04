@@ -111,11 +111,14 @@ $twig = $twigFactory->create();
 
 Pretty easy, right?
 
-
 ## License
 This programm is free software and is licensed using GPL2.
 
 For more info about the license see [https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+
+## Requirements
+
+PHP >= 7.0
 
 ## Bugs Reporting
 
