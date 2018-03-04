@@ -44,4 +44,13 @@ class FactoryTest extends TestCase
 
         $this->assertInstanceOf('Twig\\Environment', $sut->create());
     }
+
+    public function testModuleModifyTheTwigInstance()
+    {
+        $sut = new Factory(new \Twig\Loader\FilesystemLoader('./'), []);
+
+        $twig = $sut->create();
+
+        $this->assertInstanceOf('Twig\\TwigFunction', $twig->getFunction('esc_html'));
+    }
 }
