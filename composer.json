@@ -26,15 +26,14 @@
       "src/"
     ],
     "psr-4": {
-      "Unprefix\\Twig": "src"
+      "Unprefix\\Twig\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Unprefix\\Twig": "src",
-      "Unprefix\\Twig\\Tests\\": "tests",
-      "Unprefix\\Twig\\Tests\\Unit\\": "tests/unit/src",
-      "Unprefix\\Twig\\Tests\\Integration\\": "tests/integration/src"
+      "Unprefix\\Twig\\Tests\\": "tests/php",
+      "Unprefix\\Twig\\Tests\\Unit\\": "tests/php/unit/src",
+      "Unprefix\\Twig\\Tests\\Integration\\": "tests/php/integration/src"
     }
   },
   "optimize-autoloader": true,
