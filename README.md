@@ -46,7 +46,7 @@ So if you want to add a new module you can hook into this filter and return a ne
 
 For example:
 
-```
+```php
 class MyModule implements Unprefix\Twig\Module\Injectable {
 
 	public function injectInto(\Twig\Environment $twig): \Twig\Environment {
@@ -79,7 +79,9 @@ The package provide a `Factory` class that help you on creating a new instance o
 
 If you want to create a new Twig instance you can simply create a factory instance by passing a `\Twig\Loader\LoaderInterface` object and the twig options if you want to customize the environment.
 
-```
+Then call the `create` method and you've done.
+
+```php
 $twigFactory = new \Unprefix\Twig\Factory(
 	new \Twig\Loader\FilesystemLoader(),
 	[
