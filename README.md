@@ -95,14 +95,14 @@ Then call the `create` method and you've done.
 $twigFactory = new \Unprefix\Twig\Factory(
 	new \Twig\Loader\FilesystemLoader(),
 	[
-    	'debug' => false,
-    	'charset' => 'UTF-8',
-    	'base_template_class' => 'Twig_Template',
-    	'strict_variables' => false,
-    	'autoescape' => 'html',
-    	'cache' => false,
-    	'auto_reload' => null,
-    	'optimizations' => -1,
+        'debug' => false,
+        'charset' => 'UTF-8',
+        'base_template_class' => 'Twig_Template',
+        'strict_variables' => false,
+        'autoescape' => 'html',
+        'cache' => false,
+        'auto_reload' => null,
+        'optimizations' => -1,
 	]
 );
 
