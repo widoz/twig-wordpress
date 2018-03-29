@@ -39,4 +39,11 @@ class FactoryTest extends TestCase
 
         $this->assertInstanceOf('Twig\\Environment', $response);
     }
+
+    public function setUp() {
+
+        require_once UNPREFIX_TWIG_TESTS_DIR. '/php/_stubs/classes/ModuleStub.php';
+
+        parent::setUp();
+    }
 }
