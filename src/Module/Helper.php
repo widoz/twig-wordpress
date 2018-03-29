@@ -50,10 +50,6 @@ trait Helper
      */
     private function extractConfiguration(array $thing): array
     {
-        if (is_string($thing)) {
-            return [$thing, []];
-        }
-
         return [
             $thing[0],
             $thing[1] ?? [],
