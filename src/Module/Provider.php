@@ -94,7 +94,7 @@ class Provider
             if (file_exists($config)) {
                 $config              = require_once $config;
                 $modules[$className] = new $class($config);
-                break;
+                continue;
             }
 
             $modules[$module] = new $class();
