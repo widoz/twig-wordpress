@@ -25,9 +25,9 @@
 
 namespace TwigWp\Tests;
 
-use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 
-class TwigWpTestCase extends TestCase
+class TestCase extends PHPUnitTestCase
 {
     protected static $sourcePath;
 

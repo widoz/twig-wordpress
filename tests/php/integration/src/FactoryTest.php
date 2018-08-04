@@ -27,9 +27,9 @@
 namespace TwigWp\Tests\php\integration\src;
 
 use TwigWp\Factory;
-use TwigWp\Tests\TwigWpTestCase;
+use TwigWp\Tests\TestCase;
 
-class FactoryTest extends TwigWpTestCase
+class FactoryTest extends TestCase
 {
     public function testConstruct()
     {

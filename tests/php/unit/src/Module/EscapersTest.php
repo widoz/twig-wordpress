@@ -3,9 +3,9 @@
 namespace TwigWp\Tests\Unit\Module;
 
 use TwigWp\Module\Escapers;
-use TwigWp\Tests\TwigWpTestCase;
+use TwigWp\Tests\TestCase;
 
-class EscapersTest extends TwigWpTestCase
+class EscapersTest extends TestCase
 {
     public function testConstruct()
     {
