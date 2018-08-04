@@ -1,15 +1,15 @@
 <?php
 //phpcs:disable
-namespace Unprefix\Twig\Tests\Unit\Module;
+namespace TwigWp\Tests\Unit\Module;
 
-use Unprefix\Twig\Module\Kses;
+use TwigWp\Module\Kses;
 use PHPUnit\Framework\TestCase;
 
 class KsesTest extends TestCase
 {
     public function testConstruct()
     {
-        $this->assertInstanceOf('Unprefix\\Twig\\Module\\Kses', new Kses([]));
+        $this->assertInstanceOf(Kses::class, new Kses([]));
     }
 
     public function testSetup()

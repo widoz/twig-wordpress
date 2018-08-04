@@ -1,17 +1,19 @@
 <?php
 // phpcs:disable
-namespace Unprefix\Twig\Tests\Unit;
+namespace TwigWp\Tests\Unit;
 
-use Unprefix\Twig\Factory;
+use Twig\Loader\LoaderInterface;
+use TwigWp\Factory;
 use PHPUnit\Framework\TestCase;
-use Unprefix\Twig\Tests\Stubs\Classes\ModuleStub;
+use TwigWp\Module\Provider;
+use TwigWp\Tests\Stubs\Classes\ModuleStub;
 
 class FactoryTest extends TestCase
 {
     public function testCreate()
     {
-        $loaderMock   = \Mockery::mock('Twig\\Loader\\LoaderInterface');
-        $providerMock = \Mockery::mock('overload:Unprefix\\Twig\\Module\\Provider');
+        $loaderMock = \Mockery::mock(LoaderInterface::class);
+        $providerMock = \Mockery::mock('overload:' . Provider::class);
 
         $providerMock->shouldReceive('modules')
                      ->andReturn([]);
@@ -25,8 +27,8 @@ class FactoryTest extends TestCase
 
     public function testCreateWithModules()
     {
-        $loaderMock   = \Mockery::mock('Twig\\Loader\\LoaderInterface');
-        $providerMock = \Mockery::mock('overload:Unprefix\\Twig\\Module\\Provider');
+        $loaderMock = \Mockery::mock(LoaderInterface::class);
+        $providerMock = \Mockery::mock('overload:' . Provider::class);
 
         $providerMock->shouldReceive('modules')
                      ->andReturn([
@@ -40,9 +42,10 @@ class FactoryTest extends TestCase
         $this->assertInstanceOf('Twig\\Environment', $response);
     }
 
-    public function setUp() {
+    public function setUp()
+    {
 
-        require_once UNPREFIX_TWIG_TESTS_DIR. '/php/_stubs/classes/ModuleStub.php';
+        require_once TWIG_TESTS_DIR . '/php/_stubs/classes/ModuleStub.php';
 
         parent::setUp();
     }

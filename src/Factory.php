@@ -1,40 +1,24 @@
 <?php
-declare(strict_types=1);
-
 /**
- * Twig Factory
+ * This file is part of the Twig WordPress package.
  *
- * @author    Guido Scialfa <dev@guidoscialfa.com>
- * @package   Unprefix\Twig
- * @copyright Copyright (c) 2018, Guido Scialfa
- * @license   GNU General Public License, version 2
+ * (c) Guido Scialfa <dev@guidoscialfa.com>
  *
- * Copyright (C) 2018 Guido Scialfa <dev@guidoscialfa.com>
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
-namespace Unprefix\Twig;
+declare(strict_types=1);
 
-use Unprefix\Twig\Module\Provider;
+namespace TwigWp;
+
+use TwigWp\Module\Provider;
 
 /**
  * Class Factory
  *
  * @since   1.0.0
- * @package Unprefix\Twig
+ * @package TwigWp
  * @author  Guido Scialfa <dev@guidoscialfa.com>
  */
 class Factory
@@ -67,7 +51,7 @@ class Factory
      */
     public function __construct(\Twig\Loader\LoaderInterface $loader, array $options)
     {
-        $this->loader  = $loader;
+        $this->loader = $loader;
         $this->options = $options;
     }
 
@@ -80,7 +64,7 @@ class Factory
      */
     public function create(): \Twig\Environment
     {
-        $twig    = new \Twig\Environment($this->loader, $this->options);
+        $twig = new \Twig\Environment($this->loader, $this->options);
         $modules = (new Provider($twig))->modules();
 
         foreach ($modules as $module) {

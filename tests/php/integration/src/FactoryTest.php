@@ -3,7 +3,7 @@
  * FactoryTest
  *
  * @author    Guido Scialfa <dev@guidoscialfa.com>
- * @package   unprefix-twig-wordpress
+ * @package   twig-wordpress
  * @copyright Copyright (c) 2017, Guido Scialfa
  * @license   GNU General Public License, version 2
  *
@@ -24,18 +24,18 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-namespace Unprefix\Twig\Tests\php\integration\src;
+namespace TwigWp\Tests\php\integration\src;
 
-use Unprefix\Twig\Factory;
-use PHPUnit\Framework\TestCase;
+use TwigWp\Factory;
+use TwigWp\Tests\TwigWpTestCase;
 
-class FactoryTest extends TestCase
+class FactoryTest extends TwigWpTestCase
 {
     public function testConstruct()
     {
         $sut = new Factory(new \Twig\Loader\FilesystemLoader('./'), []);
 
-        $this->assertInstanceOf('\\Unprefix\\Twig\\Factory', $sut);
+        $this->assertInstanceOf(Factory::class, $sut);
     }
 
     public function testCreate()

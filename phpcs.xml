@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="WordPress PSR and PHPCompatibility">
+<ruleset name="WordPress, PSR and PHPCompatibility">
     <description>Best practices beyond core WordPress Coding Standards and PSR</description>
 
     <!--
@@ -48,7 +48,6 @@
     <rule ref="WordPress.PHP.StrictInArray"/>
 
     <rule ref="Squiz.Commenting.BlockComment"/>
-    <rule ref="Squiz.Commenting.DocCommentAlignment"/>
     <rule ref="Squiz.Commenting.EmptyCatchComment"/>
     <rule ref="Squiz.Commenting.InlineComment"/>
     <rule ref="Squiz.Commenting.LongConditionClosingComment"/>
@@ -78,8 +77,8 @@
         </properties>
     </rule>
     <rule ref="ObjectCalisthenics.ControlStructures.NoElse"/>
-    <!--<rule ref="ObjectCalisthenics.NamingConventions.ElementNameMinimalLength"/>-->
-    <!--<rule ref="ObjectCalisthenics.Classes.ForbiddenPublicProperty"/>-->
+    <rule ref="ObjectCalisthenics.NamingConventions.ElementNameMinimalLength"/>
+    <rule ref="ObjectCalisthenics.Classes.ForbiddenPublicProperty"/>
     <rule ref="ObjectCalisthenics.NamingConventions.NoSetter"/>
     <rule ref="ObjectCalisthenics.Metrics.PropertyPerClassLimit">
         <properties>

@@ -1,6 +1,6 @@
 <?php
 /**
- * UnprefixTestCase
+ * TwigWpTestCase
  *
  * @author    Guido Scialfa <dev@guidoscialfa.com>
  * @copyright Copyright (c) 2018, Guido Scialfa
@@ -23,11 +23,11 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-namespace Unprefix\Twig\Tests;
+namespace TwigWp\Tests;
 
 use PHPUnit\Framework\TestCase;
 
-class UnprefixTestCase extends TestCase
+class TwigWpTestCase extends TestCase
 {
     protected static $sourcePath;
 

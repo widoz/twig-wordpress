@@ -1,15 +1,15 @@
 <?php
 //phpcs:disable
-namespace Unprefix\Twig\Tests\Unit\Module;
+namespace TwigWp\Tests\Unit\Module;
 
-use Unprefix\Twig\Module\Escapers;
-use Unprefix\Twig\Tests\UnprefixTestCase;
+use TwigWp\Module\Escapers;
+use TwigWp\Tests\TwigWpTestCase;
 
-class EscapersTest extends UnprefixTestCase
+class EscapersTest extends TwigWpTestCase
 {
     public function testConstruct()
     {
-        $this->assertInstanceOf('\\Unprefix\\Twig\\Module\\Escapers', new Escapers([]));
+        $this->assertInstanceOf(Escapers::class, new Escapers([]));
     }
 
     public function testSetup()

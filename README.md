@@ -9,17 +9,17 @@ This package register the escape function as filters and functions because trans
 
 The package provide filters, functions and other stuffs into twig by define `modules`.
 
-Modules are class instances that implements an interface `Unprefix\Twig\Module\Injectable` used by
-the Provider `Unprefix\Twig\Module\Provider` that allow us to retrieve all modules to be set into `twig` instance.
+Modules are class instances that implements an interface `TwigWp\Module\Injectable` used by
+the Provider `TwigWp\Module\Provider` that allow us to retrieve all modules to be set into `twig` instance.
 
-There is a filter `unprefix_twig_modules` within the `Provider::modules` method that allow
+There is a filter `twigwp.modules` within the `Provider::modules` method that allow
 third party softwares to hook into the modules list so, they'll be able to add other filters, functions, tags
 or whatever they want to use to extend the twig instance
 (read about how to extend twig here [https://twig.symfony.com/doc/2.x/advanced.html](https://twig.symfony.com/doc/2.x/advanced.html)).
 
 ### Escapers
 
-Unprefix Twig for WordPress define as filters and functions the followings:
+Twig for WordPress define as filters and functions the followings:
 
 - esc_html
 - esc_html__
@@ -45,9 +45,9 @@ The kses are defined only as functions.
 
 The modules are retrieved by a Provider.
 
-Within the provider the modules can be filtered `unprefix_twig_modules`.
+Within the provider the modules can be filtered `twigwp.modules`.
 
-So if you want to add a new module you can hook into this filter and return a new instance of `Unprefix\Twig\Module\Injectable`.
+So if you want to add a new module you can hook into this filter and return a new instance of `TwigWp\Module\Injectable`.
 
 A Module is used to extend the twig instance, the method `injectInto` get a `\Twig\Environment` instance to use for example
 to add a new function, a new filter or a new tag etc...
@@ -55,7 +55,7 @@ to add a new function, a new filter or a new tag etc...
 For example:
 
 ```php
-class MyModule implements Unprefix\Twig\Module\Injectable {
+class MyModule implements TwigWp\Module\Injectable {
 
 	public function injectInto(\Twig\Environment $twig): \Twig\Environment {
 		// Do your stuffs here.
@@ -67,7 +67,7 @@ class MyModule implements Unprefix\Twig\Module\Injectable {
 
 $provider = new Provider(new \Twig\Environmnet());
 
-add_filter('unprefix_twig_modules', function($modules)
+add_filter('twigwp.modules', function($modules)
 {
 	$modules['module_name'] = new MyModule();
 
@@ -92,7 +92,7 @@ a `\Twig\Loader\LoaderInterface` object and the twig options if you want to cust
 Then call the `create` method and you've done.
 
 ```php
-$twigFactory = new \Unprefix\Twig\Factory(
+$twigFactory = new \TwigWp\Factory(
 	new \Twig\Loader\FilesystemLoader(),
 	[
         'debug' => false,
@@ -122,8 +122,8 @@ PHP >= 7.0
 
 ## Bugs Reporting
 
-To report bugs please refer to [https://github.com/widoz/unprefix-twig-wordpress/issues](https://github.com/widoz/unprefix-twig-wordpress/issues)
+To report bugs please refer to [https://github.com/widoz/twig-wordpress/issues](https://github.com/widoz/twig-wordpress/issues)
 
 ## Support
 
-For support just open a new issue [https://github.com/widoz/unprefix-twig-wordpress/issues](https://github.com/widoz/unprefix-twig-wordpress/issues) and apply the label `help wanted`.
+For support just open a new issue [https://github.com/widoz/twig-wordpress/issues](https://github.com/widoz/twig-wordpress/issues) and apply the label `help wanted`.

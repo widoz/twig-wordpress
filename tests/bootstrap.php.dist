@@ -2,6 +2,6 @@
 // Require Composer Auto-loader.
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-if (! defined('UNPREFIX_TWIG_TESTS_DIR')) {
-    define('UNPREFIX_TWIG_TESTS_DIR', dirname(__DIR__) . '/tests');
+if (! defined('TWIG_TESTS_DIR')) {
+    define('TWIG_TESTS_DIR', dirname(__DIR__) . '/tests');
 }

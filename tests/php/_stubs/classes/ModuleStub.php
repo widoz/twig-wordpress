@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace Unprefix\Twig\Tests\Stubs\Classes;
+namespace TwigWp\Tests\Stubs\Classes;
 
-use Unprefix\Twig\Module\Injectable;
+use TwigWp\Module\Injectable;
 
 /**
  * Class ModuleStub
  *
  * @since
- * @package Unprefix\Twig\Tests\php\_stubs
+ * @package TwigWp\Tests\php\_stubs
  * @author  Guido Scialfa <dev@guidoscialfa.com>
  */
 class ModuleStub implements Injectable
