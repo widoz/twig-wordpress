@@ -57,7 +57,7 @@ class Escapers implements Injectable
             // Looking for options.
             list($escaper, $options) = $this->extractConfiguration((array)$escaper);
 
-            $twig->addFilter(new \Twig_Filter($key, $escaper, $options));
+            $twig->addFilter(new \Twig\TwigFilter($key, $escaper, $options));
             $twig->addFunction(new \Twig\TwigFunction($key, $escaper, $options));
         }
 
