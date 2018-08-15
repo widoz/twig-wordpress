@@ -68,7 +68,7 @@ class Factory
         $modules = (new Provider($twig))->modules();
 
         foreach ($modules as $module) {
-            if (! $module instanceof Module\Injectable) {
+            if (!$module instanceof Module\Injectable) {
                 continue;
             }
 
