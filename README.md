@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/widoz/twig-wordpress.svg?branch=master)](https://travis-ci.org/widoz/twig-wordpress)
+[![codecov](https://codecov.io/gh/widoz/twig-wordpress/branch/master/graph/badge.svg)](https://codecov.io/gh/widoz/twig-wordpress)
+
 # Twig for WordPress
 
 Twig for WordPress allow you to use the famous Twig template engine https://twig.symfony.com/
