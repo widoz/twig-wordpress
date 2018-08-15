@@ -41,6 +41,15 @@ The kses are defined only as functions.
 - wp_kses_post
 - wp_kses_allowed_html
 
+### Sanitizers
+
+The sanitizers are defined only as functions.
+
+- sanitize_html_class
+- sanitize_text_field
+- sanitize_title
+- sanitize_key
+
 ## Provider
 
 The modules are retrieved by a Provider.
