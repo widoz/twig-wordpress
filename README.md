@@ -53,6 +53,18 @@ The sanitizers are defined only as functions.
 - sanitize_title
 - sanitize_key
 
+### Template Functions
+
+This module include all of the functions that echo html markup even if
+them are not WordPress template functions.
+
+This because most of the WordPress functions usually get some configuration by array and output html markup.
+Having to put in a object property the entire markup isn't usefull since you want to have your markup
+into your views, these functions will help you to pass the configuration and call the output function
+directly, avoiding to permit to parse html markup that may result in a unescaped html.
+
+- wp_nav_menu
+
 ## Provider
 
 The modules are retrieved by a Provider.
