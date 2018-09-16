@@ -19,6 +19,8 @@ class Kses implements Injectable
 {
     use Helper;
 
+    const FILTER_KSES_LIST = 'twigwp.kses_list';
+
     /**
      * Kses Functions list
      *
@@ -52,7 +54,7 @@ class Kses implements Injectable
              * @param array             $kses The current kses list.
              * @param \Twig\Environment $twig The twig environment instance.
              */
-            $kses = apply_filters('twigwp.kses_list', $kses, $twig);
+            $kses = apply_filters(self::FILTER_KSES_LIST, $kses, $twig);
         }
 
         foreach ($kses as $key => $k) {

@@ -17,6 +17,8 @@ class Sanitizers implements Injectable
 {
     use Helper;
 
+    const FILTER_SANITIZERS_LIST = 'twigwp.sanitizers_list';
+
     /**
      * @var array
      */
@@ -45,7 +47,7 @@ class Sanitizers implements Injectable
              * @param array $sanitizers The current sanitizers list.
              * @param \Twig\Environment $twig The twig environment instance.
              */
-            $sanitizers = apply_filters('twigwp.sanitizers_list', $sanitizers, $twig);
+            $sanitizers = apply_filters(self::FILTER_SANITIZERS_LIST, $sanitizers, $twig);
         }
 
         foreach ($sanitizers as $key => $sanitizer) {

@@ -19,6 +19,8 @@ class Escapers implements Injectable
 {
     use Helper;
 
+    const FILTER_ESCAPERS_LIST = 'twigwp.escapers_list';
+
     /**
      * WordPress Escapers
      *
@@ -50,7 +52,7 @@ class Escapers implements Injectable
              * @param array $escapers The current escapers list.
              * @param \Twig\Environment $twig The twig environment instance.
              */
-            $escapers = apply_filters('twigwp.escapers_list', $escapers, $twig);
+            $escapers = apply_filters(self::FILTER_ESCAPERS_LIST, $escapers, $twig);
         }
 
         foreach ($escapers as $key => $escaper) {

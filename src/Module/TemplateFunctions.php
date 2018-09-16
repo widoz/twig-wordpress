@@ -16,7 +16,7 @@ class TemplateFunctions implements Injectable
 {
     use Helper;
 
-    const FILTER_FUNCTIONS_LIST = 'twigwp.template_functions_list';
+    const FILTER_TEMPLATE_FUNCTIONS_LIST = 'twigwp.template_functions_list';
 
     /**
      * Kses Functions list
@@ -51,7 +51,7 @@ class TemplateFunctions implements Injectable
              * @param array $functions The current kses list.
              * @param \Twig\Environment $twig The twig environment instance.
              */
-            $functions = apply_filters(self::FILTER_FUNCTIONS_LIST, $functions, $twig);
+            $functions = apply_filters(self::FILTER_TEMPLATE_FUNCTIONS_LIST, $functions, $twig);
         }
 
         foreach ($functions as $key => $k) {
