@@ -41,7 +41,7 @@ class Provider
     public function __construct(\Twig\Environment $twig)
     {
         $this->twig = $twig;
-        $this->modulesPath = dirname(dirname(__DIR__)) . '/inc';
+        $this->modulesPath = dirname(__DIR__, 2) . '/inc';
     }
 
     /**

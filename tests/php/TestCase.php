@@ -53,6 +53,6 @@ class TestCase extends PHPUnitTestCase
     {
         parent::__construct($name, $data, $dataName);
 
-        self::$sourcePath = dirname(dirname(__DIR__));
+        self::$sourcePath = dirname(__DIR__, 2);
     }
 }
