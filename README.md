@@ -28,9 +28,11 @@ Twig for WordPress define as filters and functions the followings:
 - esc_html
 - esc_html__
 - esc_html_e
+- esc_html_x
 - esc_attr
 - esc_attr__
 - esc_attr_e
+- esc_attr_x
 - esc_js
 - esc_sql
 - esc_textarea
