@@ -31,6 +31,26 @@ class L10nTest extends TestCase
             ->once();
 
         $kses = new L10n([
+            '__' => '__',
+        ]);
+        $kses->injectInto($twigMock);
+
+        $this->assertTrue(true);
+    }
+
+    public function testFilterRegistration()
+    {
+        $twigMock = \Mockery::mock('\\Twig\\Environment');
+
+        $twigMock
+            ->shouldReceive('addFunction')
+            ->once();
+
+        $twigMock
+            ->shouldReceive('addFilter')
+            ->once();
+
+        $kses = new L10n([
             'esc_html__' => 'esc_html__',
         ]);
         $kses->injectInto($twigMock);

@@ -46,7 +46,7 @@ final class L10n implements Injectable
             /**
              * Filter i10n List to register
              *
-             * @param array             $i10n The current kses list.
+             * @param array $i10n The current kses list.
              * @param \Twig\Environment $twig The twig environment instance.
              */
             $i10n = apply_filters(self::FILTER_L10N_LIST, $i10n, $twig);
@@ -57,6 +57,10 @@ final class L10n implements Injectable
             list($k, $options) = $this->extractConfiguration((array)$k);
 
             $twig->addFunction(new \Twig\TwigFunction($key, $k, $options));
+
+            if (strpos($key, 'esc_', 0) !== false) {
+                $twig->addFilter(new \Twig\TwigFilter($key, $k, $options));
+            }
         }
 
         return $twig;
