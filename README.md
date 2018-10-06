@@ -51,8 +51,7 @@ The sanitizers are defined only as functions.
 ### L10n
 
 Localization functions, including the escaped ones.
-Localizations functions that start with `esc_` (escape) are also
-registered as filters.
+Localizations functions that start with `esc_` (escape) are also registered as filters.
 
 - __
 - _e
