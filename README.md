@@ -25,14 +25,6 @@ or whatever they want to use to extend the twig instance
 
 Twig for WordPress define as filters and functions the followings:
 
-- esc_html
-- esc_html__
-- esc_html_e
-- esc_html_x
-- esc_attr
-- esc_attr__
-- esc_attr_e
-- esc_attr_x
 - esc_js
 - esc_sql
 - esc_textarea
@@ -55,6 +47,25 @@ The sanitizers are defined only as functions.
 - sanitize_text_field
 - sanitize_title
 - sanitize_key
+
+### L10n
+
+Localization functions, including the escaped ones
+
+- __
+- _e
+- _n
+- _x
+- _ex
+- _nx
+- esc_attr
+- esc_attr__
+- esc_attr_e
+- esc_attr_x
+- esc_html
+- esc_html__
+- esc_html_e
+- esc_html_x
 
 ### Template Functions
 
