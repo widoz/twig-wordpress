@@ -45,15 +45,13 @@ class Escapers implements Injectable
     {
         $escapers = $this->escapers;
 
-        if (function_exists('apply_filters')) {
-            /**
-             * Filter Escapers List to register
-             *
-             * @param array $escapers The current escapers list.
-             * @param \Twig\Environment $twig The twig environment instance.
-             */
-            $escapers = apply_filters(self::FILTER_ESCAPERS_LIST, $escapers, $twig);
-        }
+        /**
+         * Filter Escapers List to register
+         *
+         * @param array $escapers The current escapers list.
+         * @param \Twig\Environment $twig The twig environment instance.
+         */
+        $escapers = apply_filters(self::FILTER_ESCAPERS_LIST, $escapers, $twig);
 
         foreach ($escapers as $key => $escaper) {
             // Looking for options.

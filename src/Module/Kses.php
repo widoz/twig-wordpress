@@ -45,17 +45,15 @@ class Kses implements Injectable
     {
         $kses = $this->kses;
 
-        if (function_exists('apply_filters')) {
-            /**
-             * Filter Kses List to register
-             *
-             * @since 1.0.0
-             *
-             * @param array $kses The current kses list.
-             * @param \Twig\Environment $twig The twig environment instance.
-             */
-            $kses = apply_filters(self::FILTER_KSES_LIST, $kses, $twig);
-        }
+        /**
+         * Filter Kses List to register
+         *
+         * @since 1.0.0
+         *
+         * @param array $kses The current kses list.
+         * @param \Twig\Environment $twig The twig environment instance.
+         */
+        $kses = apply_filters(self::FILTER_KSES_LIST, $kses, $twig);
 
         foreach ($kses as $key => $function) {
             // Looking for options.

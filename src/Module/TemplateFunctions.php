@@ -42,17 +42,15 @@ class TemplateFunctions implements Injectable
     {
         $functions = $this->functions;
 
-        if (function_exists('apply_filters')) {
-            /**
-             * Filter Kses List to register
-             *
-             * @since 1.0.0
-             *
-             * @param array $functions The current kses list.
-             * @param \Twig\Environment $twig The twig environment instance.
-             */
-            $functions = apply_filters(self::FILTER_TEMPLATE_FUNCTIONS_LIST, $functions, $twig);
-        }
+        /**
+         * Filter Kses List to register
+         *
+         * @since 1.0.0
+         *
+         * @param array $functions The current kses list.
+         * @param \Twig\Environment $twig The twig environment instance.
+         */
+        $functions = apply_filters(self::FILTER_TEMPLATE_FUNCTIONS_LIST, $functions, $twig);
 
         foreach ($functions as $key => $function) {
             // Looking for options.

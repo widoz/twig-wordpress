@@ -42,15 +42,13 @@ final class L10n implements Injectable
     {
         $i10n = $this->i10n;
 
-        if (function_exists('apply_filters')) {
-            /**
-             * Filter i10n List to register
-             *
-             * @param array $i10n The current kses list.
-             * @param \Twig\Environment $twig The twig environment instance.
-             */
-            $i10n = apply_filters(self::FILTER_L10N_LIST, $i10n, $twig);
-        }
+        /**
+         * Filter i10n List to register
+         *
+         * @param array $i10n The current kses list.
+         * @param \Twig\Environment $twig The twig environment instance.
+         */
+        $i10n = apply_filters(self::FILTER_L10N_LIST, $i10n, $twig);
 
         foreach ($i10n as $key => $function) {
             // Looking for options.
