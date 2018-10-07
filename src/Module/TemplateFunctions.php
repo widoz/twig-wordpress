@@ -54,11 +54,11 @@ class TemplateFunctions implements Injectable
             $functions = apply_filters(self::FILTER_TEMPLATE_FUNCTIONS_LIST, $functions, $twig);
         }
 
-        foreach ($functions as $key => $k) {
+        foreach ($functions as $key => $function) {
             // Looking for options.
-            list($k, $options) = $this->extractConfiguration((array)$k);
+            list($function, $options) = $this->extractConfiguration((array)$function);
 
-            $twig->addFunction(new \Twig\TwigFunction($key, $k, $options));
+            $twig->addFunction(new \Twig\TwigFunction($key, $function, $options));
         }
 
         return $twig;

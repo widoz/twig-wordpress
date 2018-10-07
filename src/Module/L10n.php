@@ -52,14 +52,14 @@ final class L10n implements Injectable
             $i10n = apply_filters(self::FILTER_L10N_LIST, $i10n, $twig);
         }
 
-        foreach ($i10n as $key => $k) {
+        foreach ($i10n as $key => $function) {
             // Looking for options.
-            list($k, $options) = $this->extractConfiguration((array)$k);
+            list($function, $options) = $this->extractConfiguration((array)$function);
 
-            $twig->addFunction(new \Twig\TwigFunction($key, $k, $options));
+            $twig->addFunction(new \Twig\TwigFunction($key, $function, $options));
 
             if (strpos($key, 'esc_', 0) !== false) {
-                $twig->addFilter(new \Twig\TwigFilter($key, $k, $options));
+                $twig->addFilter(new \Twig\TwigFilter($key, $function, $options));
             }
         }
 

@@ -51,17 +51,17 @@ class Kses implements Injectable
              *
              * @since 1.0.0
              *
-             * @param array             $kses The current kses list.
+             * @param array $kses The current kses list.
              * @param \Twig\Environment $twig The twig environment instance.
              */
             $kses = apply_filters(self::FILTER_KSES_LIST, $kses, $twig);
         }
 
-        foreach ($kses as $key => $k) {
+        foreach ($kses as $key => $function) {
             // Looking for options.
-            list($k, $options) = $this->extractConfiguration((array)$k);
+            list($function, $options) = $this->extractConfiguration((array)$function);
 
-            $twig->addFunction(new \Twig\TwigFunction($key, $k, $options));
+            $twig->addFunction(new \Twig\TwigFunction($key, $function, $options));
         }
 
         return $twig;
