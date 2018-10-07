@@ -79,6 +79,7 @@ into your views, these functions will help you to pass the configuration and cal
 directly, avoiding to permit to parse html markup that may result in a unescaped html.
 
 - wp_nav_menu
+- get_adjacent_post_link
 
 ## Provider
 
