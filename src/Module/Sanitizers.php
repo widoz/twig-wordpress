@@ -15,7 +15,7 @@ namespace TwigWp\Module;
 /**
  * Class Sanitizers
  */
-class Sanitizers implements Injectable
+final class Sanitizers implements Injectable
 {
     use Helper;
 

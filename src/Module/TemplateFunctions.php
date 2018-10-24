@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace TwigWp\Module;
 
-class TemplateFunctions implements Injectable
+final class TemplateFunctions implements Injectable
 {
     use Helper;
 

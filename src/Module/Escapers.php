@@ -15,7 +15,7 @@ namespace TwigWp\Module;
 /**
  * Class Escapers
  */
-class Escapers implements Injectable
+final class Escapers implements Injectable
 {
     use Helper;
 

@@ -15,7 +15,7 @@ namespace TwigWp\Module;
 /**
  * Class Kses
  */
-class Kses implements Injectable
+final class Kses implements Injectable
 {
     use Helper;
 
