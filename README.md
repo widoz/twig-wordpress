@@ -30,6 +30,8 @@ Twig for WordPress define as filters and functions the followings:
 - esc_textarea
 - esc_url
 - esc_url_raw
+- esc_attr
+- esc_html
 
 ### Kses
 
@@ -59,11 +61,9 @@ Localizations functions that start with `esc_` (escape) are also registered as f
 - _x
 - _ex
 - _nx
-- esc_attr
 - esc_attr__
 - esc_attr_e
 - esc_attr_x
-- esc_html
 - esc_html__
 - esc_html_e
 - esc_html_x
