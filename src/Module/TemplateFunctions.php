@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 namespace TwigWp\Module;
 
-class TemplateFunctions implements Injectable
+final class TemplateFunctions implements Injectable
 {
     use Helper;
 
@@ -42,23 +42,21 @@ class TemplateFunctions implements Injectable
     {
         $functions = $this->functions;
 
-        if (function_exists('apply_filters')) {
-            /**
-             * Filter Kses List to register
-             *
-             * @since 1.0.0
-             *
-             * @param array $functions The current kses list.
-             * @param \Twig\Environment $twig The twig environment instance.
-             */
-            $functions = apply_filters(self::FILTER_TEMPLATE_FUNCTIONS_LIST, $functions, $twig);
-        }
+        /**
+         * Filter Kses List to register
+         *
+         * @since 1.0.0
+         *
+         * @param array $functions The current kses list.
+         * @param \Twig\Environment $twig The twig environment instance.
+         */
+        $functions = apply_filters(self::FILTER_TEMPLATE_FUNCTIONS_LIST, $functions, $twig);
 
-        foreach ($functions as $key => $k) {
+        foreach ($functions as $key => $function) {
             // Looking for options.
-            list($k, $options) = $this->extractConfiguration((array)$k);
+            list($function, $options) = $this->extractConfiguration((array)$function);
 
-            $twig->addFunction(new \Twig\TwigFunction($key, $k, $options));
+            $twig->addFunction(new \Twig\TwigFunction($key, $function, $options));
         }
 
         return $twig;

@@ -25,17 +25,13 @@ or whatever they want to use to extend the twig instance
 
 Twig for WordPress define as filters and functions the followings:
 
-- esc_html
-- esc_html__
-- esc_html_e
-- esc_attr
-- esc_attr__
-- esc_attr_e
 - esc_js
 - esc_sql
 - esc_textarea
 - esc_url
 - esc_url_raw
+- esc_attr
+- esc_html
 
 ### Kses
 
@@ -54,6 +50,24 @@ The sanitizers are defined only as functions.
 - sanitize_title
 - sanitize_key
 
+### L10n
+
+Localization functions, including the escaped ones.
+Localizations functions that start with `esc_` (escape) are also registered as filters.
+
+- __
+- _e
+- _n
+- _x
+- _ex
+- _nx
+- esc_attr__
+- esc_attr_e
+- esc_attr_x
+- esc_html__
+- esc_html_e
+- esc_html_x
+
 ### Template Functions
 
 This module include all of the functions that echo html markup even if
@@ -65,6 +79,7 @@ into your views, these functions will help you to pass the configuration and cal
 directly, avoiding to permit to parse html markup that may result in a unescaped html.
 
 - wp_nav_menu
+- get_adjacent_post_link
 
 ## Provider
 

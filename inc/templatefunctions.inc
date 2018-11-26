@@ -12,4 +12,5 @@ declare(strict_types=1);
 
 return [
     'wp_nav_menu' => 'wp_nav_menu',
+    'get_adjacent_post_link' => 'get_adjacent_post_link',
 ];

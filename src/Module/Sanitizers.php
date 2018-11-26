@@ -8,12 +8,14 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace TwigWp\Module;
 
 /**
  * Class Sanitizers
  */
-class Sanitizers implements Injectable
+final class Sanitizers implements Injectable
 {
     use Helper;
 
@@ -40,15 +42,13 @@ class Sanitizers implements Injectable
     {
         $sanitizers = $this->sanitizers;
 
-        if (function_exists('apply_filters')) {
-            /**
-             * Filter Escapers List to register
-             *
-             * @param array $sanitizers The current sanitizers list.
-             * @param \Twig\Environment $twig The twig environment instance.
-             */
-            $sanitizers = apply_filters(self::FILTER_SANITIZERS_LIST, $sanitizers, $twig);
-        }
+        /**
+         * Filter Escapers List to register
+         *
+         * @param array $sanitizers The current sanitizers list.
+         * @param \Twig\Environment $twig The twig environment instance.
+         */
+        $sanitizers = apply_filters(self::FILTER_SANITIZERS_LIST, $sanitizers, $twig);
 
         foreach ($sanitizers as $key => $sanitizer) {
             // Looking for options.

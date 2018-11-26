@@ -73,17 +73,15 @@ class Provider
             $modules[$module] = new $class();
         }
 
-        if (function_exists('apply_filters')) {
-            /**
-             * Filter Modules
-             *
-             * @since 1.0.0
-             *
-             * @param array $modules The registered modules.
-             * @param \Twig\Environment $twig The Twig Environment Instance.
-             */
-            $modules = apply_filters('twigwp.modules', $modules, $this->twig);
-        }
+        /**
+         * Filter Modules
+         *
+         * @since 1.0.0
+         *
+         * @param array $modules The registered modules.
+         * @param \Twig\Environment $twig The Twig Environment Instance.
+         */
+        $modules = apply_filters('twigwp.modules', $modules, $this->twig);
 
         return array_filter($modules);
     }

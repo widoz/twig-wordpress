@@ -6,8 +6,8 @@
         backupGlobals="true"
         backupStaticAttributes="true"
         processIsolation="true"
-        stopOnError="true"
-        stopOnFailure="true">
+        stopOnError="false"
+        stopOnFailure="false">
     <testsuites>
         <testsuite>
             <directory suffix="Test.php">./tests/php/unit/src/</directory>
