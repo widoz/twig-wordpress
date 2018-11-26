@@ -3,7 +3,7 @@
 namespace TwigWp\Tests\Unit\Module;
 
 use TwigWp\Module\Kses;
-use PHPUnit\Framework\TestCase;
+use TwigWp\Tests\TestCase;
 
 class KsesTest extends TestCase
 {

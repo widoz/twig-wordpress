@@ -4,9 +4,9 @@ namespace TwigWp\Tests\Unit;
 
 use Twig\Loader\LoaderInterface;
 use TwigWp\Factory;
-use PHPUnit\Framework\TestCase;
 use TwigWp\Module\Provider;
 use TwigWp\Tests\Stubs\Classes\ModuleStub;
+use TwigWp\Tests\TestCase;
 
 class FactoryTest extends TestCase
 {
