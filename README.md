@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/widoz/twig-wordpress.svg?branch=master)](https://travis-ci.org/widoz/twig-wordpress)
-[![codecov](https://codecov.io/gh/widoz/twig-wordpress/branch/master/graph/badge.svg)](https://codecov.io/gh/widoz/twig-wordpress)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/widoz/twig-wordpress/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/widoz/twig-wordpress/?branch=master)
+[![Build Status](https://img.shields.io/travis/widoz/twig-wordpress/develop.svg?style=flat-square)](https://travis-ci.org/widoz/twig-wordpress)
+[![codecov](https://img.shields.io/codecov/c/github/widoz/twig-wordpress/develop.svg?style=flat-square)](https://codecov.io/gh/widoz/twig-wordpress)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/widoz/twig-wordpress/develop.svg?style=flat-square)](https://scrutinizer-ci.com/g/widoz/twig-wordpress/?branch=develop)
 
 # Twig for WordPress
 
